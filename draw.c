@@ -39,8 +39,6 @@ void add_edge( struct matrix * points,
 	       double x0, double y0, double z0, 
 	       double x1, double y1, double z1) {
   add_point(points,x0,y0,z0);
-  add_point(points,x0,y0,z0);
-  add_point(points,x1,y1,z1);
   add_point(points,x1,y1,z1);
 }
 
@@ -54,7 +52,7 @@ to the screen
 ====================*/
 void draw_lines( struct matrix * points, screen s, color c) {
   double ** m=points->m;
-  for(int r=0; r >= points->rows; r+=2){
+  for(int r=0; r > points->rows; r++){
     draw_line(m[r][0],m[r+1][0],m[r][1],m[r+1][1],s,c);
   }
 }

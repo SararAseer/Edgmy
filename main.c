@@ -11,5 +11,7 @@ int main() {
   screen s;
   struct matrix *edges;
   edges = new_matrix(4, 4);
+  add_point(edges, 0,0,0);
+  print_matrix(edges);
   free_matrix( edges );
 }  
